@@ -98,4 +98,4 @@ Authors
 
 BCP is invented by Edward Lam with assistance from Pierre Le Bodic, Daniel Harabor and Peter J. Stuckey. Edward can be reached at [ed-lam.com](https://ed-lam.com).
 
-Nguyen Tien Thanh clones the code and modifies by myself
+Nguyen Tien Thanh clones the code and modifies by himself
