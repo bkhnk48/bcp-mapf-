@@ -46,10 +46,11 @@ tar xf boost_1_79_0.tar.gz
     cmake -DGUROBI_DIR={PATH TO GUROBI DIRECTORY} .
     cmake --build .
     ```
-    1b. If you get error as "cmake" step, perhaps you could try install new packages by running this command: 
     
+    If you get error as "cmake" step, perhaps you could try install new packages by running this command: 
+    ```
     apt-get install wget cmake g++ m4 xz-utils libgmp-dev unzip zlib1g-dev libboost-program-options-dev libboost-serialization-dev libboost-regex-dev libboost-iostreams-dev libtbb-dev libreadline-dev pkg-config git liblapack-dev libgsl-dev flex bison libcliquer-dev gfortran file dpkg-dev libopenblas-dev rpm
-    
+    ```
     It works for my case (April, 18th, 2023)
     
     2. If using CPLEX, locate the subdirectory `cplex` and copy this directory into the command below.
