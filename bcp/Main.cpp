@@ -14,7 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with BCP-MAPF.  If not, see <https://www.gnu.org/licenses/>.
 
-Author: Edward Lam <ed@ed-lam.com>
+Author: Edward Lam <ed@ed-lam.com>; Nguyen Tien Thanh <nguyenthanh@soict.hust.edu.vn>
 */
 
 #include "Includes.h"
@@ -102,6 +102,8 @@ SCIP_RETCODE start_solver(
     println("Branch-and-cut-and-price for multi-agent path finding");
     println("Edward Lam <ed@ed-lam.com>");
     println("Monash University, Melbourne, Australia");
+    println("Nguyen Tien Thanh <nguyenthanh@soict.hust.edu.vn>");
+    println("HUST, SOICT, Hanoi, Vietnam");
 #ifdef DEBUG
     println("Compiled in debug mode");
 #ifdef USE_WAITEDGE_CONFLICTS
