@@ -101,15 +101,21 @@ Authors
 BCP is invented by Edward Lam with assistance from Pierre Le Bodic, Daniel Harabor and Peter J. Stuckey. Edward can be reached at [ed-lam.com](https://ed-lam.com).
 
 Nguyen Tien Thanh clones the code and modifies by himself
+
+Debugging
 -------
+
 Hint: According to Mr.Edward Lam, I found that if you want to debug the C++ code (for example: Main.cpp), you would follow two steps:
+
     1. Replace Release in CMakeLists.txt by Debug
     ```
     set(CMAKE_BUILD_TYPE Debug)
     ```
+    
     2. Add two flags "-g" in two lines of CMakeLists.txt
     ```
     target_compile_options(bcp-mapf PRIVATE -DDEBUG -D_GLIBCXX_DEBUG -g)
     target_compile_options(trufflehog PRIVATE -DDEBUG -D_GLIBCXX_DEBUG -g) 
     ```
+
 Having a cool debugging with GDB! ^_^
