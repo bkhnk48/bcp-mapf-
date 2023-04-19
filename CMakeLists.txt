@@ -12,9 +12,9 @@ set(CMAKE_C_STANDARD_REQUIRED 1)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED 1)
 
-# Set release build.
+# Set debug build.
 if (NOT CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE Release)
+    set(CMAKE_BUILD_TYPE Debug)
 endif ()
 
 # Set up compile options
@@ -316,7 +316,7 @@ target_compile_options(bcp-mapf PRIVATE -DUSE_BEST_FIRST_NODE_SELECTION)
 #target_compile_options(bcp-mapf PRIVATE -DUSE_PATH_LENGTH_NOGOODS)
 
 # Set warnings.
-target_compile_options(bcp-mapf PRIVATE -Wall -Wextra -Wignored-qualifiers -Werror=return-type)
+target_compile_options(bcp-mapf PRIVATE -Wall -Wextra -Wignored-qualifiers -Werror=return-type -g)
 target_compile_options(trufflehog PRIVATE -Wall -Wextra -Wignored-qualifiers -Werror=return-type)
 
 # Set flags.
@@ -325,8 +325,8 @@ if (MARCH_NATIVE)
     target_compile_options(bcp-mapf PRIVATE -march=native)
 endif ()
 if (CMAKE_BUILD_TYPE STREQUAL "Debug")
-    target_compile_options(bcp-mapf PRIVATE -DDEBUG -D_GLIBCXX_DEBUG)
-    target_compile_options(trufflehog PRIVATE -DDEBUG -D_GLIBCXX_DEBUG)
+    target_compile_options(bcp-mapf PRIVATE -DDEBUG -D_GLIBCXX_DEBUG -g)
+    target_compile_options(trufflehog PRIVATE -DDEBUG -D_GLIBCXX_DEBUG -g) 
     message("Compiled in debug mode")
 elseif (CMAKE_BUILD_TYPE STREQUAL "RelWithDebInfo")
     target_compile_options(bcp-mapf PRIVATE -Og -DNDEBUG -funroll-loops -fstrict-aliasing)
