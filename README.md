@@ -71,6 +71,8 @@ After compiling, run BCP with:
 ./bcp-mapf {PATH TO INSTANCE}
 ```
 
+For example: ./bcp-mapf instances/warehouse/10x30-w5/10x30-w5map-10agents-0.scen
+
 You can also set a time limit in seconds:
 ```
 ./bcp-mapf —-time-limit={TIME LIMIT} {PATH TO INSTANCE}
