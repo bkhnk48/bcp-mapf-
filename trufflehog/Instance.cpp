@@ -115,6 +115,9 @@ void read_map(const std::filesystem::path& map_path, Map& map)
                 map.set_passable(n);
                 [[fallthrough]];
             default:
+                //if(c == '@'){
+                    //printf("@ here \n");
+                //}
                 n++;
                 break;
         }
